@@ -1,0 +1,14 @@
+서비스 기동 (postgres 계정에서 진행)
+
+- 기동
+[~]$ sudo systemctl start pgautofailover.service
+
+- 확인
+[~]$ sudo systemctl status pgautofailover.service
+
+- pgautofailover 상태 확인
+[~]$ pg_autoctl show state
+Name |  Node |              Host:Port |       TLI: LSN |   Connection |      Reported State |      Assigned State
+-----+-------+------------------------+----------------+--------------+---------------------+--------------------
+ mdw |     1 |   failoverprimary:5432 |  11: 0/451B7A0 |   read-write |             primary |             primary
+smdw |    10 | failoversecondary:5432 |  11: 0/4000000 |    read-only |           secondary |           secondary

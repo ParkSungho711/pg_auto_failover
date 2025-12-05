@@ -1,0 +1,16 @@
+# 경로 /etc/systemd/system/pgautofailover.service
+[Unit]
+Description= pg_auto_failover
+
+[Service]
+WorkingDirectory = /var/lib/pgsql
+Environment=PGDATA=/var/lib/pgsql/16/data/
+User=postgres
+ExecStart=/usr/pgsql-16/bin/pg_autoctl run --pgdata ${PGDATA}
+Restart = always
+StartLimitBurst = 0
+ExecReload = /usr/pgsql-16/bin/pg_autoct reload
+ExecStop = /usr/pgsql-16/bin/pg_autoct stop
+
+[Install]
+WantedBy=multi-user.target

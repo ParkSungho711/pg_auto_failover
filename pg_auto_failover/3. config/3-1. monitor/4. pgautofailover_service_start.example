@@ -1,0 +1,14 @@
+서비스 기동 (postgres 계정에서 진행)
+
+- 기동
+[~]$ sudo systemctl start pgautofailover.service
+
+- 확인
+[~]$ sudo systemctl status pgautofailover.service
+
+- formation 모음 확인
+[~]$ pg_autoctl show uri
+        Type |    Name | Connection String
+-------------+---------+-------------------------------
+     monitor | monitor | postgres://autoctl_node:changeme@failovermonitor:5432/pg_auto_failover?sslmode=require
+   formation |  fotest | postgres://failoverprimary:5432,failoversecondary:5432/postgres?target_session_attrs=read-write&sslmode=require

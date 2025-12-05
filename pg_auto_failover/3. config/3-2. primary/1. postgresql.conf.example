@@ -1,0 +1,10 @@
+# 경로 /var/lib/pgsql/16/data/postgresql.conf
+# 아래 내용 추가
+
+listen_addresses = '*'
+log_directory = 'pg_log'
+log_filename = 'postgresql-%Y%m%d_%H%M%S.log'
+max_wal_size = 8GB
+min_wal_size = 2GB
+compute_query_id = on
+

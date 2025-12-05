@@ -1,0 +1,10 @@
+# 아래 설정 참고
+# 각 노드 아이피 변경
+
+local   all             all                                     scram-sha-256
+host    all             all             127.0.0.1/32            scram-sha-256
+host    all             all             ::1/128                 scram-sha-256
+local   replication     all                                     scram-sha-256
+host    replication     all             127.0.0.1/32            scram-sha-256
+host    replication     all             ::1/128                 scram-sha-256
+host    all     pgautofailover_replicator    [secondary_ip]/32     scram-sha-256

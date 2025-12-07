@@ -57,6 +57,12 @@ PG_AUTO_FAILOVER-MAIN<br>
     ├── 4-4. auto-failover_test.md<br>
     └── 4-5. virtual_ip_change_test.md<br>
 
+<h2>서비스 상태</h2>
+Name | Node | Host:Port | TLI: LSN | Connection | Reported State | Assigned State<br>
+-----+-------+------------------------+----------------+--------------+---------------------+--------------------<br>
+mdw | 1 | failoverprimary:5432 | 13: 0/451BFC0 | read-write | primary | primary<br>
+smdw | 10 | failoversecondary:5432 | 13: 0/451BFC0 | read-only | secondary | secondary<br>
+
 
 <h2>env</h2>
 <p>env 폴더는 서비스 운영에 필요한 환경설정에 대하여 작성 하였습니다.</p>

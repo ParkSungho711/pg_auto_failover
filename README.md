@@ -61,9 +61,17 @@ PG_AUTO_FAILOVER-MAIN<br>
 
 
 <h2>env</h2>
-<p>env는 서비스 운영에 필요한 환경설정 정보 입니다.</p>
+<p>env 폴더는 서비스 운영에 필요한 환경설정에 대하여 작성 하였습니다.</p>
 
 <h2>install</h2>
-<p>install은 postgresql, pgautofailover, keepalived 의 각 설치에 필요한 명령어 등의 정보 입니다.</p>
+<p>install 폴더는 postgresql, pgautofailover, keepalived 의 각 설치에 필요한 명령어 등의 정보를 작성 하였습니다.</p>
 
 <h2>init</h2>
+<p>init 폴더는 서비스 구축에 대한 정보를 작성 하였습니다.</p>
+
+<h2>config</h2>
+<p>config 폴더는 서비스 구축 및 운영에 필요한 conf 설정에 대한 정보를 작성 하였습니다.</p>
+
+<h2>docs</h2>
+<p>docs 폴더는 각 항목에 대하여 설명에 대한 정보를 작성 하였습니다.</p>
+<p>test 관련 md는 command 와 테스트 결과에 대해 작성 하였습니다.</p>

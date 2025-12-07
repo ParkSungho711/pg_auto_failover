@@ -4,8 +4,6 @@
 
 <p>pg_auto_failover 공식문서 : https://pg-auto-failover.readthedocs.io/en/main/</p>
 
-<br>
-
 <h2>트리 구조</h2>
 PG_AUTO_FAILOVER-MAIN<br>
 ├── 0. env<br>

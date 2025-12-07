@@ -7,57 +7,57 @@
 <br>
 
 <h2>트리 구조</h2>
-PG_AUTO_FAILOVER-MAIN
-├── 0. env
-│   └── pg_env.sh
-│
-├── 1. install
-│   ├── 1-1. postgresql
-│   │   └── postgresql_install.sh
-│   ├── 1-2. pgautofailover
-│   │   └── pgautofailover_install.sh
-│   └── 1-3. keepalived
-│       └── keelalived_install.sh
-│
-├── 2. init
-│   ├── 2-1. monitor
-│   │   └── monitor_init.sh
-│   ├── 2-2. primary
-│   │   └── primary_init.sh
-│   └── 2-3. secondary
-│
-├── 3. config
-│   ├── 3-1. monitor
-│   │   ├── 1. postgresql.conf.example
-│   │   ├── 2. pg_hba.conf.example
-│   │   ├── 3. pgautofailover.service.example
-│   │   └── 4. pgautofailover_service_start.example
-│   │
-│   ├── 3-2. primary
-│   │   ├── 1. postgresql.conf.example
-│   │   ├── 2. pg_hba.conf.example
-│   │   ├── 3. pgautofailover.service.example
-│   │   └── 4. pgautofailover_service_start.example
-│   │
-│   └── 3-3. secondary
-│       ├── 1. postgresql.conf.example
-│       ├── 2. pg_hba.conf.example
-│       ├── 3. pgautofailover.service.example
-│       └── 4. pgautofailover_service_start.example
-│
-├── 3-4. keepalived
-│   ├── 3-4-0. check_primary
-│   ├── 3-4-1. primary
-│   ├── 3-4-2. secondary
-│   └── 3-4-3. service_start
-│
-└── 4. docs
-    ├── 4-0. env.md
-    ├── 4-1. install.md
-    ├── 4-2. init.md
-    ├── 4-3. config.md
-    ├── 4-4. auto-failover_test.md
-    └── 4-5. virtual_ip_change_test.md
+PG_AUTO_FAILOVER-MAIN<br>
+├── 0. env<br>
+│   └── pg_env.sh<br>
+│<br>
+├── 1. install<br>
+│   ├── 1-1. postgresql<br>
+│   │   └── postgresql_install.sh<br>
+│   ├── 1-2. pgautofailover<br>
+│   │   └── pgautofailover_install.sh<br>
+│   └── 1-3. keepalived<br>
+│       └── keelalived_install.sh<br>
+│<br>
+├── 2. init<br>
+│   ├── 2-1. monitor<br>
+│   │   └── monitor_init.sh<br>
+│   ├── 2-2. primary<br>
+│   │   └── primary_init.sh<br>
+│   └── 2-3. secondary<br>
+│<br>
+├── 3. config<br>
+│   ├── 3-1. monitor<br>
+│   │   ├── 1. postgresql.conf.example<br>
+│   │   ├── 2. pg_hba.conf.example<br>
+│   │   ├── 3. pgautofailover.service.example<br>
+│   │   └── 4. pgautofailover_service_start.example<br>
+│   │<br>
+│   ├── 3-2. primary<br>
+│   │   ├── 1. postgresql.conf.example<br>
+│   │   ├── 2. pg_hba.conf.example<br>
+│   │   ├── 3. pgautofailover.service.example<br>
+│   │   └── 4. pgautofailover_service_start.example<br>
+│   │<br>
+│   └── 3-3. secondary<br>
+│       ├── 1. postgresql.conf.example<br>
+│       ├── 2. pg_hba.conf.example<br>
+│       ├── 3. pgautofailover.service.example<br>
+│       └── 4. pgautofailover_service_start.example<br>
+│<br>
+├── 3-4. keepalived<br>
+│   ├── 3-4-0. check_primary<br>
+│   ├── 3-4-1. primary<br>
+│   ├── 3-4-2. secondary<br>
+│   └── 3-4-3. service_start<br>
+│<br>
+└── 4. docs<br>
+    ├── 4-0. env.md<br>
+    ├── 4-1. install.md<br>
+    ├── 4-2. init.md<br>
+    ├── 4-3. config.md<br>
+    ├── 4-4. auto-failover_test.md<br>
+    └── 4-5. virtual_ip_change_test.md<br>
 
 
 <h2>env</h2>

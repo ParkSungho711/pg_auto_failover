@@ -1,0 +1,24 @@
+# 디렉토리 생성
+sudo mkdir /etc/keepalived/scripts/
+
+# 경로 이동 
+cd /etc/keepalived/scripts/
+
+# shell script 생성
+sudo vi /etc/keepalived/scripts/check_primary.sh
+
+# postgres 명령어를 활용하여 replication 상태인지 확인
+# 아래 내용 붙여넣기
+
+#!/bin/bash
+#pg_auto_failover status check
+STATE=$(su - postgres -c "psql -Atc 'select pg_is_in_recovery();'")
+
+if [[ "$STATE" == "f" ]]; then
+                exit 0 #vip 유지
+else
+                exit 1 #vip 중지
+fi
+
+# 권한 설정
+sudo chmod +x /etc/keepalived/scripts/check_primary.sh

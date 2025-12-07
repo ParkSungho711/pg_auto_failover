@@ -1,0 +1,45 @@
+# 경로 이동
+cd /etc/keepalived/
+
+# 원본 백업
+sudo cp keepalived.conf keepalived.conf_bak
+
+# conf 파일 열기
+sudo vi keepalived.conf
+
+# secondary node에서 아래 내용으로 수정
+
+#secondary
+! Configuration File for keepalived
+
+global_defs {
+    router_id HAproxy_fotest
+    script_user root
+}
+vrrp_script primary_check_script{
+    # 노드 상태가 primary인지 replicamode 인지 감지하는 shell script
+    script "/etc/keepalived/scripts/check_primary.sh"
+    interval 5
+    fall 2
+    rise 2
+    weight 20
+}
+vrrp_instance VI_1 {
+    state BACKUP
+    interface ens161
+    # 가상 id로 타 formation과 겹치지 않아야 함.
+    virtual_router_id 51
+    priority 99
+    advert_int 1
+    authentication {
+        auth_type PASS
+        auth_pass 1234
+    }
+    #vip
+    virtual_ipaddress {
+        192.168.3.189
+    }
+    track_script{
+        primary_check_script
+    }
+}

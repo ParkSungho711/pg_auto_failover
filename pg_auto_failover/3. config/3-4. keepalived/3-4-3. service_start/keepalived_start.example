@@ -1,0 +1,8 @@
+# enable 설정
+sudo systemctl enable keepalived.service
+
+# 서비스 시작
+sudo systemctl start keepalived.service
+
+# 상태 확인
+sudo systemctl status keepalived.service
